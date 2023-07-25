@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>SentimentAnalysis</display-name>
+	<servlet>
+		<servlet-name>Account</servlet-name>
+		<servlet-class>com.sentimentanalysis.servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Account</servlet-name>
+		<url-pattern>/account</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>analyze</servlet-name>
+		<servlet-class>com.sentimentanalysis.servlet.AsAServiceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>analyze</servlet-name>
+		<url-pattern>/analyze</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>Twitterhandle</servlet-name>
+		<servlet-class>com.sentimentanalysis.servlet.TwitterHandleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Twitterhandle</servlet-name>
+		<url-pattern>/twitterhandle</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Twitterkeyword</servlet-name>
+		<servlet-class>com.sentimentanalysis.servlet.TwitterKeywordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Twitterkeyword</servlet-name>
+		<url-pattern>/twitterkeyword</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Adhocrun</servlet-name>
+		<servlet-class>com.sentimentanalysis.servlet.AdhocRunServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Adhocrun</servlet-name>
+		<url-pattern>/adhocrun</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Run</servlet-name>
+		<servlet-class>com.sentimentanalysis.servlet.RunTwitterSentimentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Run</servlet-name>
+		<url-pattern>/run</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
